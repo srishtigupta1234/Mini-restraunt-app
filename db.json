@@ -1,0 +1,111 @@
+{
+  "users": [
+    {
+      "id": "3fe6",
+      "name": "srishti",
+      "email": "srishtigupta23456@gmail.com",
+      "password": "97527"
+    },
+    {
+      "id": "2",
+      "name": "sri",
+      "email": "sriigupta97527@gamil.com",
+      "password": "1234"
+    },
+    {
+      "id": "1",
+      "name": "kaushal",
+      "email": "kaushal123@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "5",
+      "name": "kaushal chacha",
+      "email": "kaushal1234@gmail.com",
+      "password": "123456",
+      "role": "admin"
+    }
+  ],
+  "menu": [
+    {
+      "id": 1,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Lj3_8eh0xYQLDhyh1pYwOF6l00mL7hIfww&s",
+      "title": "Pizza Margherita",
+      "description": "Classic pizza with mozzarella and basil",
+      "price": 12,
+      "rating": 4.5
+    },
+    {
+      "id": 2,
+      "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_366/RX_THUMBNAIL/IMAGES/VENDOR/2024/6/10/1a88a2e9-9c50-4fb9-9736-729860086ea0_905166.jpg",
+      "title": "Burger",
+      "description": "Juicy beef burger with lettuce and cheese",
+      "price": 8,
+      "rating": 4.7
+    },
+    {
+      "id": "3",
+      "image": "https://rp-media.faasos.io/catalog/images/KUT9MMUYTBL6.jpeg",
+      "title": "Biryani ",
+      "description": " a flavorful, layered rice dish from the Indian subcontinent that's made with spices, meat or vegetables, and rice",
+      "price": "1200",
+      "rating": "2.9"
+    },
+    {
+      "id": "4",
+      "image": "https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/tandoori-paneer.4ef45717e972cf45b43c010e3cde5a22.1.jpg",
+      "title": "Pizza",
+      "description": "a baked Italian dish of flattened bread dough topped with various ingredients and baked",
+      "price": "2300",
+      "rating": "4.0"
+    },
+    {
+      "id": "5",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsxwmW1XmWvcvLzYwrl8l4rG8ZWSNbu3GIJA&s",
+      "title": "Shahi Paneer",
+      "description": "a rich and creamy North Indian dish of paneer (Indian cottage cheese) in a gravy made with tomatoes, onions, nuts, and spices.",
+      "price": "12000",
+      "rating": "5"
+    },
+    {
+      "id": "6",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtSEEaidTIW4v3rHvk8bvpZTpcyMlywcxcag&s",
+      "title": "Chowmien",
+      "description": "a Chinese dish of stir-fried noodles with vegetables, protein, and sometimes gravy",
+      "price": "1000",
+      "rating": "2.8"
+    },
+    {
+      "id": "7",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBKvqnEq2iBJXQcsNlV1z85shATqEmM69l-w&s",
+      "title": "Paneer Tikka",
+      "description": "an Indian dish made from chunks of paneer/ chhena marinated in spices and grilled in a tandoor",
+      "price": "3000",
+      "rating": "5"
+    },
+    {
+      "id": "8",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_BeYsDx9HD-tgkBNDNgjKwi144I9Jju4_Gw&s",
+      "title": "Pasta",
+      "description": "a food made from flour, water, and sometimes eggs, that is formed into various shapes and cooked",
+      "price": "890",
+      "rating": "4"
+    },
+    {
+      "id": "9",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShry1nGHe1edyHBsrrw1umY-CCFAwWDuqpTA&s",
+      "title": "Patties",
+      "description": "a flat, round piece of food that's usually cooked and can be made from a variety of ingredients",
+      "price": "450",
+      "rating": "2.9"
+    },
+    {
+      "id": "10",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3N0Yq7z-ZBBumwhqUdr_gTw6SVAJxc64oxA&s",
+      "title": "Garlic bread",
+      "description": "Garlic bread (also called garlic toast) consists of bread topped with garlic and occasionally olive oil or butter",
+      "price": "350",
+      "rating": "4.8"
+    }
+  ]
+}

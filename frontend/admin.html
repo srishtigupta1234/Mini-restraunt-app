@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Admin</h1>
+    <div>
+        <h1>Add Items</h1>
+        <form >
+            <input type="number" placeholder="Enter id" id="aid">
+            <input type="text" placeholder="Enter image url" id="aurl">
+            <input type="text" placeholder="Enter title" id="atitle">
+            <input type="text" placeholder="Enter description" id="ades">
+            <input type="number" placeholder="Enter price" id="ap">
+            <input type="number" placeholder="Enter rating" id="ar">
+        </form>
+        <button onclick="Addproduct()">Add Item</button>
+    </div>
+    <div>
+        <h1>Delete Item</h1>
+        <form >
+            <input type="number" placeholder="Enter id" id="did">
+        </form>
+        <button onclick="Deleteproduct()">Delete Item</button>
+    </div>
+    <div>
+        <h1>Update Item</h1>
+        <form >
+            <input type="number" placeholder="Enter id" id="uid">
+            <input type="text" placeholder="Enter image url" id="uurl">
+            <input type="text" placeholder="Enter title" id="utitle">
+            <input type="text" placeholder="Enter description" id="udes">
+            <input type="number" placeholder="Enter price" id="up">
+            <input type="number" placeholder="Enter rating" id="ur">
+        </form>
+        <button onclick="Updateproduct()">Update Item</button>
+    </div>
+    <h2><a href="view.html">Take me to Restruant</a></h2>
+</body>
+    
+</html>
+<script>
+    function x(id){
+        return document.getElementById(id).value;
+    }
+     async function Addproduct(){
+        const Product = {
+            id : x("aid"),
+            image : x("aurl"),
+            title: x("atitle"),
+            description : x("ades"),
+            price : x("ap"),
+            rating : x("ar"),
+        }
+        let res = await fetch("http://localhost:3000/menu",{
+            method:"POST",
+            body:JSON.stringify(Product),
+            headers:{
+                'Content-Type':"application/json"
+            }
+        })
+        const data = await response.json();
+        console.log("Response data:", data);
+    
+     }
+     async function Deleteproduct(){
+       
+        let id = x("did");
+    
+        let res = await fetch(`http://localhost:3000/menu/${id}`,{
+            method:"DELETE",
+            headers:{
+                'Content-Type':"application/json"
+            }
+        })
+        const data = await response.json();
+        console.log("Response data:", data);
+    
+     }
+     async function Updateproduct(){
+        let id = x("uid");
+        let res = await fetch(`http://localhost:3000/menu/${id}`,{
+            method:"PATCH",
+            body:JSON.stringify({
+                image : x("uurl"),
+                title: x("utitle"),
+                description : x("udes"),
+                price : x("up"),
+                rating : x("ur"),
+            }),
+            headers:{
+                'Content-Type':"application/json"
+            }
+        })
+        const data = await response.json();
+        console.log("Response data:", data);
+    
+     }
+</script>

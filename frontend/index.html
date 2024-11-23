@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="register-form">
+        <h1>Register</h1>
+        <form> 
+            <input type="text" id="id" placeholder="Enter id">
+            <input type="text" id="name" placeholder ="Enter name">
+            <input type="text" id="email" placeholder="Enter Email">
+            <input type="password" id="password" placeholder="Enter Password"> 
+            <input type="text" id="role" placeholder="Enter role">
+        </form>
+        <button onclick="Register()">Register</button>
+    </div>
+    <div id="login-form">
+        <h1>Login</h1>
+        <form >
+            <input type="text" id="lemail" placeholder="Enter Email">
+            <input type="password" id="lpassword" placeholder="Enter Password"> 
+        </form>
+        <button onclick="Login()">Login</button>
+    </div>
+</body>
+</html>
+<script>
+    async function Register(){
+        const signupData = {
+        id: document.getElementById("id").value,
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value,
+        role:document.getElementById("role").value
+       
+      };
+
+        const response = await fetch('http://localhost:3000/users', {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(signupData),
+        });
+
+        const data = await response.json();
+        console.log("Response data:", data);
+    
+    }
+    async function Login(){
+      
+        let lemail = document.getElementById("lemail").value;
+        let lpassword = document.getElementById("lpassword").value;
+       
+
+
+        const response = await fetch('http://localhost:3000/users', {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        
+        const users = await response.json();
+        // console.log("Response data:", data);
+        const user = users.find(u => u.email === lemail && u.password === lpassword);
+    
+    if (user ) {
+        // If a matching user is found, login is successful
+        alert("Logged in successfully");
+        if(user.role==="admin"){
+            console.log("Admin role verified")
+             window.location.href = "admin.html";
+        }
+        else{
+            window.location.href = "view.html";  // Redirect to rest.html
+        }
+       
+    } else {
+        // If no user matches the credentials
+        alert("Invalid credentials. Please try again.");
+    }
+    
+    }
+
+</script>
